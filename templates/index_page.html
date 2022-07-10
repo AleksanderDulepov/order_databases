@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная страничка</title>
+</head>
+<body>
+<h1>Work with database</h1>
+<p>Выберите интересующую Вас категорию</p>
+<hr>
+<h2>Users</h2>
+<form action="/users" method="GET">
+    <span>
+        <p>Поиск всех пользователей</p>
+        <input type="submit" value="Выполнить запрос">
+    </span>
+</form>
+<br>
+<form action="/users/" method="get">
+    <span>
+        <p>Поиск по id пользователя</p>
+        <input type="text" name="id" placeholder="Введите id пользователя">
+        <input type="submit" value="Выполнить запрос">
+    </span>
+</form>
+<br>
+<form action="/users" method="POST">
+    <span>
+        <p>Добавление нового пользователя</p>
+        <div><input type="text" name="first_name" placeholder="Введите имя"></div>
+        <div><input type="text" name="last_name" placeholder="Введите фамилию"></div>
+        <div><input type="text" name="age" placeholder="Введите возраст"></div>
+        <div><input type="text" name="email" placeholder="Введите почту"></div>
+        <div><input type="text" name="role" placeholder="Введите роль"></div>
+        <div><input type="text" name="phone" placeholder="Введите телефон"></div>
+    </span>
+    <input type="submit" value="Добавить">
+</form>
+<br>
+<form action="/users/{{id}}" method="PUT">
+    <span>
+        <p>Редактирование пользователя</p>
+        <div><input type="text" name="id" placeholder="Введите id"></div>
+        <div><input type="text" name="first_name" placeholder="Введите имя"></div>
+        <div><input type="text" name="last_name" placeholder="Введите фамилию"></div>
+        <div><input type="text" name="age" placeholder="Введите возраст"></div>
+        <div><input type="text" name="email" placeholder="Введите почту"></div>
+        <div><input type="text" name="role" placeholder="Введите роль"></div>
+        <div><input type="text" name="phone" placeholder="Введите телефон"></div>
+    </span>
+    <input type="submit" value="Добавить">
+</form>
+<hr>
+<h2>Orders</h2>
+<form action="/orders" method="GET">
+    <span>
+        <p>Поиск всех заказов</p>
+        <input type="submit" value="Выполнить запрос">
+    </span>
+</form>
+<br>
+<form action="/orders/" method="get">
+    <span>
+        <p>Поиск по id заказа</p>
+        <input type="text" name="id" placeholder="Введите id заказа">
+        <input type="submit" value="Выполнить запрос">
+    </span>
+</form>
+<br>
+<form action="/orders" method="POST">
+    <span>
+        <p>Добавление нового заказа</p>
+        <div><input type="text" name="name" placeholder="Введите название"></div>
+        <div><input type="text" name="description" placeholder="Введите описание"></div>
+        <div><input type="text" name="start_date" placeholder="Дата старта (число/месяц/год)"></div>
+        <div><input type="text" name="end_date" placeholder="Дата окончания (число/месяц/год)"></div>
+        <div><input type="text" name="address" placeholder="Введите адрес"></div>
+        <div><input type="text" name="price" placeholder="Введите цену"></div>
+        <div><input type="text" name="customer_id" placeholder="Введите заказчика"></div>
+        <div><input type="text" name="executor_id" placeholder="Введите исполнителя"></div>
+    </span>
+    <input type="submit" value="Добавить">
+</form>
+<br>
+<hr>
+<h2>Offers</h2>
+<form action="/offers" method="GET">
+    <span>
+        <p>Поиск всех предложений</p>
+        <input type="submit" value="Выполнить запрос">
+    </span>
+</form>
+<br>
+<form action="/offers/" method="get">
+    <span>
+        <p>Поиск по id предложения</p>
+        <input type="text" name="id" placeholder="Введите id предложения">
+        <input type="submit" value="Выполнить запрос">
+    </span>
+</form>
+<br>
+<form action="/offers" method="POST">
+    <span>
+        <p>Добавление нового предложения</p>
+        <div><input type="text" name="order_id" placeholder="Введите номер заказа"></div>
+        <div><input type="text" name="executor_id" placeholder="Введите исполнителя"></div>
+    </span>
+    <input type="submit" value="Добавить">
+</form>
+<br>
+
+</body>
+</html>
